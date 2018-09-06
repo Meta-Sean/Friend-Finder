@@ -7,7 +7,7 @@ var connection = require('./app/data/connection.js');
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,7 +20,7 @@ require('./app/routing/htmlRoutes.js')(app);
 
   // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
+app.listen(port, function() {
     console.log("App listening on PORT " + PORT);
   });
   
